@@ -1,0 +1,11 @@
+# Ignorar a pasta de dependências
+node_modules/
+
+# Ignorar arquivos gerados pela compilação TypeScript
+dist/
+
+# Ignorar arquivos de configuração do VSCode
+.vscode/
+
+# Ignorar arquivos de cache do TypeScript
+*.tsbuildinfo
