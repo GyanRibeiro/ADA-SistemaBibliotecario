@@ -1,5 +1,14 @@
 export default class Biblioteca {
-    livro: Livros[] = [];
+    _livro: Livros[] = [];
+
+    get livro() : Livros[] {
+        return this._livro
+    }
+
+    set livro(livro: Livros[]) {
+        this._livro = livro;
+    }
+    
 
     // Método que adiciona um livro a biblioteca
     adicionarLivro(livro:Livros){
@@ -129,5 +138,26 @@ export class Usuarios {
             this.livrosPegos.splice(index, 1);
             livro.qtdDisponivel++;
         }
+    }
+}
+
+export class LivroAventura extends Livros {
+    constructor(titulo: string, autor: Autores, isbn: number, qtddisponivel: number, public genero: string) {
+        super(titulo, autor, isbn, qtddisponivel)
+        this.genero = genero
+    }
+}
+
+export class LivroTerror extends Livros {
+    constructor(titulo: string, autor: Autores, isbn: number, qtddisponivel: number, public assunto: string) {
+        super(titulo, autor, isbn, qtddisponivel)
+        this.assunto = assunto
+    }
+}
+
+export class LivroHistoria extends Livros {
+    constructor(titulo: string, autor: Autores, isbn: number, qtddisponivel: number, public assunto: string) {
+        super(titulo, autor, isbn, qtddisponivel)
+        this.assunto = assunto;
     }
 }
