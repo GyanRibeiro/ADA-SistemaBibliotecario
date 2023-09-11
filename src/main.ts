@@ -1,4 +1,4 @@
-import Biblioteca, { Autores, LivroAventura, LivroHistoria, Livros, Usuarios,} from "./classes";
+import Biblioteca, { Autores, Emprestimo, LivroAventura, LivroHistoria, Livros, Usuarios,} from "./classes";
 
 // Exemplo de uso
 const autor1 = new Autores('Herman Melville');
@@ -27,11 +27,11 @@ console.log("-------------------------------------------------------------");
 const usuario1 = new Usuarios('Usuário 1', 12);
 usuario1.pegarLivroEmprestado(livro1);
 
-const usuario2 = new Usuarios('Usuário 2', 21);
+const usuario2 = new Usuarios('José', 21);
 usuario2.pegarLivroEmprestado(livroAventura);
 
 const usuario3 = new Usuarios('Gyan', 19);
-usuario3.pegarLivroEmprestado(livroHistoria)
+usuario3.pegarLivroEmprestado(livroHistoria);
 
 console.log("-------------------------------------------------------------");
 // Remove Livro
@@ -40,3 +40,9 @@ biblioteca.removerLivro(livro2)
 console.log("-------------------------------------------------------------");
 // Lista os livros novamente
 biblioteca.listarLivros();
+
+console.log("\n-------------------------------------------------------------");
+Emprestimo.registrarEmprestimo(usuario3, livroHistoria);
+Emprestimo.registrarEmprestimo(usuario2, livroAventura);
+
+Emprestimo.registrarDevolucao(usuario3, livroHistoria);
