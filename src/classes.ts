@@ -172,20 +172,36 @@ export class Emprestimo {
         this.livro = livro;
     }
 
-    static emprestimos: Emprestimo[] = [];
+    emprestimos: Emprestimo[] = [];
 
-    static registrarEmprestimo(usuario: Usuarios, livro: Livros) {
+    registrarEmprestimo(usuario: Usuarios, livro: Livros) {
         const emprestimo = new Emprestimo(usuario, livro);
         this.emprestimos.push(emprestimo);
         console.log(`Empréstimo realizado!`);
     }
 
-    static registrarDevolucao(usuario: Usuarios, livro: Livros) {
+    registrarDevolucao(usuario: Usuarios, livro: Livros) {
         const emprestimoIndex = this.emprestimos.findIndex(emprestimo => emprestimo.usuario === usuario && emprestimo.livro === livro);
         if (emprestimoIndex !== -1) {
           this.emprestimos.splice(emprestimoIndex, 1);
           console.log("Devolução realizada!");
           livro.qtdDisponivel++;
         }
+    }
+
+    calcularMulta(diasAtraso: number): number {
+        let multa = 0;
+        const livro = this.livro;
+
+        if (livro instanceof LivroAventura) {
+            multa = diasAtraso * 2; // 2 reais por dia de atraso
+        } else if (livro instanceof LivroTerror) {
+            multa = diasAtraso * 3; // 3 reais por dia de atraso
+        } else if (livro instanceof LivroHistoria) {
+            multa = diasAtraso * 1.5; // 1.5 reais por dia de atraso
+        }
+
+        console.log(`Você atrasou ${diasAtraso} dias, sua multa é de: ${multa}$`);
+        return multa;
     }
 }

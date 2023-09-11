@@ -42,7 +42,13 @@ console.log("-------------------------------------------------------------");
 biblioteca.listarLivros();
 
 console.log("\n-------------------------------------------------------------");
-Emprestimo.registrarEmprestimo(usuario3, livroHistoria);
-Emprestimo.registrarEmprestimo(usuario2, livroAventura);
+const emprestimo1 = new Emprestimo(usuario3, livroHistoria)
+const emprestimo2 = new Emprestimo(usuario2, livroAventura);
 
-Emprestimo.registrarDevolucao(usuario3, livroHistoria);
+emprestimo2.registrarEmprestimo(usuario2, livroAventura);
+emprestimo1.registrarEmprestimo(usuario3, livroHistoria);
+
+emprestimo2.registrarDevolucao(usuario2, livroAventura);
+emprestimo2.calcularMulta(9)
+
+console.log("\n-------------------------------------------------------------");
