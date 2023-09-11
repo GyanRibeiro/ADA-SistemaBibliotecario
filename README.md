@@ -16,3 +16,20 @@
 ```bash
 git clone https://github.com/seu-usuario/seu-repositorio.git
 ```
+
+## 🤝 Colaboradores
+
+#### Agradecemos às seguintes pessoas que contribuíram para este projeto:
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/GyanRibeiro">
+        <img src="https://conteudo.imguol.com.br/c/parceiros/48/2021/11/24/seu-madruga-em-cena-do-chaves-1637785049183_v2_450x450.jpg" width="100px;" alt="Foto do Robin dos jovens Titans"/><br>
+        <sub>
+          <b>Eu Mesmo</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
