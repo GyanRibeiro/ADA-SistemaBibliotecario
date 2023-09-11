@@ -17,4 +17,11 @@ usuario1.pegarLivroEmprestado(livro1);
 const usuario2 = new Usuarios('Usuário 2', 21);
 usuario2.pegarLivroEmprestado(livro2);
 
+//Lista os livros
+biblioteca.listarLivros();
+
+// Remove Livro
+biblioteca.removerLivro(livro2)
+
+// Lista os livros novamente
 biblioteca.listarLivros();

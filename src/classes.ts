@@ -1,12 +1,19 @@
 export default class Biblioteca {
     livro: Livros[] = [];
-    // private autores: Autores[] = [];
-    // private usuarios: Usuarios[] = [];
 
+    // Método que adiciona um livro a biblioteca
     adicionarLivro(livro:Livros){
         this.livro.push(livro);
     }
 
+    // Método que remove um livro da biblioteca
+    removerLivro(livro:Livros) {
+        console.log(`\nLivro Removido: ${livro.titulo}, ISBN: ${livro.isbn}`);
+        const indexParaRemover = this.livro.indexOf(livro)
+        this.livro.splice(indexParaRemover, 1);
+    }
+
+    // Método que lista os livros da Biblioteca
     listarLivros() {
         console.log("\nLivros disponíveis:");
         const livrosDisponiveis = this.livro.filter((livro) => livro.qtdDisponivel > 0);
@@ -19,11 +26,11 @@ export default class Biblioteca {
         // }
     }
 
+    // Método que encontra um livro pelo seu ISBN
     encontrarLivros(isbn: number) {
         return `Livro encontrado${this.livro.find((livro)=> livro.isbn === isbn)}`
     }
 }
-
 export class Livros {
 
     constructor(
@@ -109,11 +116,13 @@ export class Usuarios {
         this._livrosPegos = livrosPegos;
     }
 
+    // Método que faz o usuário pegar um livro emprestado (Dinimui a quantidade disponível)
     pegarLivroEmprestado(livro: Livros){
         this.livrosPegos.push(livro);
         livro.qtdDisponivel--
     }
 
+    // Método que faz o usuário devolver um livro pego emprestado (Almenta a quantidade disponível)
     devolver(livro: Livros) {
         const index = this.livrosPegos.indexOf(livro);
         if (index !== -1) {
