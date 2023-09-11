@@ -9,7 +9,7 @@ export default class Biblioteca {
 
     listarLivros() {
         console.log("\nLivros disponíveis:");
-        const livrosDisponiveis = this.livro.filter((livro) => livro.qtddisponivel > 0);
+        const livrosDisponiveis = this.livro.filter((livro) => livro.qtdDisponivel > 0);
         livrosDisponiveis.forEach((livro) => {
             console.log(`Título: ${livro.titulo}, Autor: ${livro.autor.nome}, ISBN: ${livro.isbn}`);
         });
@@ -27,10 +27,43 @@ export default class Biblioteca {
 export class Livros {
 
     constructor(
-        public titulo: string, 
-        public autor: Autores, 
-        public isbn: number, 
-        public qtddisponivel: number){
+        private _titulo: string, 
+        private _autor: Autores, 
+        private _isbn: number, 
+        private _qtddisponivel: number){
+    }
+
+    
+    get titulo(): string {
+        return this._titulo
+    }
+
+    set titulo(titulo: string) {
+        this._titulo = titulo;
+    }
+    
+    get autor(): Autores {
+        return this._autor
+    }
+
+    set autor(autor: Autores) {
+        this._autor = autor;
+    }
+
+    get isbn(): number {
+        return this._isbn
+    }
+
+    set isbn(isbn: number) {
+        this._isbn = isbn;
+    }
+
+    get qtdDisponivel(): number {
+        return this._qtddisponivel
+    }
+
+    set qtdDisponivel(qtdDisponivel: number) {
+        this._qtddisponivel = qtdDisponivel;
     }
 }
 
@@ -47,19 +80,45 @@ export class Autores {
 export class Usuarios {
 
     constructor (
-        public nome: string, 
-        public identificacao: number, 
-        public livrosPegos: Livros[] = []) {
+        private _nome: string, 
+        private _identificacao: number, 
+        private _livrosPegos: Livros[] = []) {
+    }
+
+    get nome(): string {
+        return this._nome
+    }
+
+    set nome(nome: string) {
+        this._nome = nome;
+    }
+
+    get identificacao(): number {
+        return this._identificacao
+    }
+
+    set identificacao(identificacao: number) {
+        this._identificacao = identificacao;
+    }
+
+    get livrosPegos(): Livros[] {
+        return this._livrosPegos
+    }
+
+    set livrosPegos(livrosPegos: Livros[]) {
+        this._livrosPegos = livrosPegos;
     }
 
     pegarLivroEmprestado(livro: Livros){
-        this.livrosPegos.push(livro)
+        this.livrosPegos.push(livro);
+        livro.qtdDisponivel--
     }
 
     devolver(livro: Livros) {
         const index = this.livrosPegos.indexOf(livro);
         if (index !== -1) {
             this.livrosPegos.splice(index, 1);
+            livro.qtdDisponivel++;
         }
     }
 }
