@@ -19,17 +19,24 @@ biblioteca.adicionarLivro(livro2);
 biblioteca.adicionarLivro(livroAventura);
 biblioteca.adicionarLivro(livroHistoria);
 
+//Lista os livros
+biblioteca.listarLivros();
+
+console.log("-------------------------------------------------------------");
+
 const usuario1 = new Usuarios('Usuário 1', 12);
 usuario1.pegarLivroEmprestado(livro1);
 
 const usuario2 = new Usuarios('Usuário 2', 21);
-usuario2.pegarLivroEmprestado(livro2);
+usuario2.pegarLivroEmprestado(livroAventura);
 
-//Lista os livros
-biblioteca.listarLivros();
+const usuario3 = new Usuarios('Gyan', 19);
+usuario3.pegarLivroEmprestado(livroHistoria)
 
+console.log("-------------------------------------------------------------");
 // Remove Livro
 biblioteca.removerLivro(livro2)
 
+console.log("-------------------------------------------------------------");
 // Lista os livros novamente
 biblioteca.listarLivros();

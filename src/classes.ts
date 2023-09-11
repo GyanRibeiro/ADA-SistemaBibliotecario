@@ -27,7 +27,7 @@ export default class Biblioteca {
         console.log("\nLivros disponíveis:");
         const livrosDisponiveis = this.livro.filter((livro) => livro.qtdDisponivel > 0);
         livrosDisponiveis.forEach((livro) => {
-            console.log(`Título: ${livro.titulo}, Autor: ${livro.autor.nome}, ISBN: ${livro.isbn}`);
+            console.log(`Título: ${livro.titulo}, Autor: ${livro.autor.nome}, ISBN: ${livro.isbn}, Quantidades disponíveis: ${livro.qtdDisponivel}`);
         });
 
         // for (const i in this.livro){
@@ -128,6 +128,7 @@ export class Usuarios {
     // Método que faz o usuário pegar um livro emprestado (Dinimui a quantidade disponível)
     pegarLivroEmprestado(livro: Livros){
         this.livrosPegos.push(livro);
+        console.log(`Livro pego: ${livro.titulo}`)
         livro.qtdDisponivel--
     }
 
