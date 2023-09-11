@@ -1,4 +1,8 @@
-import Biblioteca, { Autores, Emprestimo, LivroAventura, LivroHistoria, Livros, Usuarios,} from "./classes";
+import Biblioteca from './models/Biblioteca';
+import { Livros, LivroAventura, LivroHistoria, LivroTerror } from './models/Livros';
+import { Usuarios } from './models/Usuarios';
+import { Emprestimo } from './models/Emprestimo';
+import { Autores } from './models//Autores';
 
 // Exemplo de uso
 const autor1 = new Autores('Herman Melville');
