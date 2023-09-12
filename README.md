@@ -10,23 +10,37 @@
 ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 
 ## 📥 Como baixar/clonar o projeto
-#### 1. Certifique-se de ter o Node.js instalado em seu sistema. Caso ainda não tenha, você pode baixá-lo[aqui](https://nodejs.org/).
+#### 1. Certifique-se de ter o Node.js instalado em seu sistema. Caso ainda não tenha, você pode baixá-lo [aqui](https://nodejs.org/).
 
 ```bash
   # 2. Clone o Repositório
   git clone https://github.com/GyanRibeiro/ADA-SistemaBibliotecario.git
 ```
 ```bash
-  # Entre no diretório
+  # 3. Entre no diretório
   cd ADA-SistemaBibliotecario
 ```
 
 ```bash
-  #instale as dependências usando npm ou yarn:
+  # 4.instale as dependências usando npm ou yarn:
   npm install
   # ou
   yarn install
 ```
+
+`Quando você estiver satisfeito com suas alterações`
+
+``` bash
+  # 5. Crie um branch
+  git checkout -b minha-nova-feature
+  # 6. Confirme e commit suas mudanças
+  git add .
+  git commit -m "Adicionei recurso X"
+  # 7. Envie suas alterações
+  git push origin minha-nova-feature
+```
+`Faça uma Solicitação de Pull (Pull Request)`
+> Consulte a documentação caso tenha dúvidas de como fazer uma solicitação [pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)
 
 ## 🤝 Colaboradores
 
