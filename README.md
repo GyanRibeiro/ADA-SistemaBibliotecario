@@ -10,11 +10,22 @@
 ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 
 ## 📥 Como baixar/clonar o projeto
-#### 1. Certifique-se de ter o Node.js instalado em seu sistema. Caso ainda não tenha, você pode baixá-lo [aqui](https://nodejs.org/).
+#### 1. Certifique-se de ter o Node.js instalado em seu sistema. Caso ainda não tenha, você pode baixá-lo[aqui](https://nodejs.org/).
 
-#### 2. Clone o Repositório
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
+  # 2. Clone o Repositório
+  git clone https://github.com/GyanRibeiro/ADA-SistemaBibliotecario.git
+```
+```bash
+  # Entre no diretório
+  cd ADA-SistemaBibliotecario
+```
+
+```bash
+  #instale as dependências usando npm ou yarn:
+  npm install
+  # ou
+  yarn install
 ```
 
 ## 🤝 Colaboradores
