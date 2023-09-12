@@ -58,3 +58,6 @@
     </td>
   </tr>
 </table>
+
+### 📠 Entre em contato
+[Linkedim](https://www.linkedin.com/in/gyanribeiro/)
