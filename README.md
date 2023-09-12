@@ -61,3 +61,5 @@
 
 ### 📠 Entre em contato
 [Linkedim](https://www.linkedin.com/in/gyanribeiro/)
+
+Copyright © 2023 GyanRibeiro
