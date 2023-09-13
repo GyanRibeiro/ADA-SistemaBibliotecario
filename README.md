@@ -60,6 +60,6 @@
 </table>
 
 ### 📠 Entre em contato
-[Linkedim](https://www.linkedin.com/in/gyanribeiro/)
+[Linkedin](https://www.linkedin.com/in/gyanribeiro/)
 
 Copyright © 2023 GyanRibeiro
