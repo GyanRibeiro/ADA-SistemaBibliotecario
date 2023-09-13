@@ -2,7 +2,7 @@ import Biblioteca from './models/Biblioteca';
 import { Livros, LivroAventura, LivroHistoria, LivroTerror } from './models/Livros';
 import { Usuarios } from './models/Usuarios';
 import { Emprestimo } from './models/Emprestimo';
-import { Autores } from './models//Autores';
+import { Autores } from './models/Autores';
 
 // Exemplo de uso
 const autor1 = new Autores('Herman Melville');
@@ -53,6 +53,6 @@ emprestimo2.registrarEmprestimo(usuario2, livroAventura);
 emprestimo1.registrarEmprestimo(usuario3, livroHistoria);
 
 emprestimo2.registrarDevolucao(usuario2, livroAventura);
-emprestimo2.calcularMulta(9)
+emprestimo2.calcularMulta(22)
 
 console.log("\n-------------------------------------------------------------");

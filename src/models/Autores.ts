@@ -1,8 +1,18 @@
 import { Livros } from './Livros';
 
 export class Autores {
-    livrosEscritos: Livros[] = []
+    _livrosEscritos: Livros[] = []
     constructor(public nome: string, livrosEscritos: Livros[] = []){
+        this._livrosEscritos = livrosEscritos;
+    }
+
+    
+    get livrosEscritos(): Livros[]{
+        return this._livrosEscritos
+    }
+    
+    set livrosEscritos(livrosEscritos : Livros[]) {
+        this._livrosEscritos = livrosEscritos;
     }
 
     adicionarLivro(livro: Livros) {

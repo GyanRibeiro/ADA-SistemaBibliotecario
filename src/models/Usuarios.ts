@@ -34,9 +34,13 @@ export class Usuarios {
 
     // Método que faz o usuário pegar um livro emprestado (Dinimui a quantidade disponível)
     pegarLivroEmprestado(livro: Livros){
-        this.livrosPegos.push(livro);
-        console.log(`Livro pego: ${livro.titulo}`)
-        livro.qtdDisponivel--
+        if (livro.qtdDisponivel > 0) {
+            this._livrosPegos.push(livro);
+            console.log(`Livro pego: ${livro.titulo}`);
+            livro.qtdDisponivel--;
+        } else {
+            console.log(`Livro "${livro.titulo}" não está disponível para empréstimo.`);
+        }    
     }
 
     // Método que faz o usuário devolver um livro pego emprestado (Almenta a quantidade disponível)

@@ -40,6 +40,7 @@ export default class Biblioteca {
 
     // Método que encontra um livro pelo seu ISBN
     encontrarLivros(isbn: number) {
-        return `Livro encontrado${this.livro.find((livro)=> livro.isbn === isbn)}`
+        const livroEncontrado = this.livro.find((livro)=> livro.isbn === isbn)
+        return livroEncontrado ? `Livro encontrado: ${livroEncontrado.titulo}` : 'Livro não encontrado';
     }
 }
